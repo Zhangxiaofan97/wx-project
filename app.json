@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/aboutUs/aboutUs",
+    "pages/shoppingMall/shoppingMall",
+    "pages/metaverse/metaverse",
+    "pages/login/login",
+    "pages/userServiceAgreement/userServiceAgreement",
+    "pages/privacyAgreement/privacyAgreement"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shoppingMall/shoppingMall",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/aboutUs/aboutUs",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
