@@ -1,18 +1,40 @@
-.touxiang{
-  width:200rpx;
-  height:200rpx;
-  border-radius: 50%;
-  margin-bottom: 40rpx;
-}
-.touxiangView{
+
+.container{
+  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
+.loginImg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
 .usermotto {
-  margin-top: 200px;
+  z-index: 10;
 }
-.escapeButton{
-  margin-top: 20rpx;
+
+
+
+
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.inbox{
+  display:flex;
+  margin: 10px 0 0 10px;
+}
+
+

@@ -1,0 +1,48 @@
+<kivicube-slam
+  wx:if="{{isRender}}"
+  class="slam"
+  style="width: {{kivw}};height: {{kivh}};"
+  license="{{license}}"
+  version="v2"
+  downgrade="{{true}}"
+  bindready="ready"
+  binderror="error"
+/>
+
+<!-- 返回按钮 -->
+<view class="backButton" style="top: {{backButtonLocationtop}}px;">
+    <view class="backBox" bindtap="backPage"></view>
+    <view class="backHomeBox" bindtap="goHomePage"></view>
+    <image class="back" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//backButton.png" mode=""></image>
+    <view class="segmentation"></view>
+    <image class="backHome" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//backHome.png" mode=""></image>
+  </view>
+
+<view style="width: 100vw;height: 100vh;background-color: cadetblue;"></view>
+
+<view class="textBox" wx:if="{{textBoxType}}">
+  <text style="font-size: {{textSize}}rpx;text-align: center;">{{text}}</text>
+</view>
+
+<view class="textBox" wx:if="{{countDownType}}">
+  <text>剩余时间：{{countDown}}s</text>
+</view>
+
+<view class="buttonBox" wx:if="{{shellType}}" bindtap="clickShell">
+  <view class="text">
+    <p>连续点击此处，</p>
+    <p>激发潮力</p>
+  </view>
+  <image class="bgWave" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//bgWave.png" />
+  <view class="shade" style="height: {{shadeHeight}}rpx"></view>
+</view>
+
+<image bindtap="becomeAttachedTo" class="knot" style="width: {{knotSize}}rpx !important;height: {{knotSize}}rpx !important" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//knot.png" />
+
+<view class="popUpWindows" wx:if="{{popUpWindowsType}}">
+  <view class="popUpWindowsText1" style="margin-top: 34rpx;">恭喜你又结识了一只新的潮兽！</view>
+  <view class="popUpWindowsText1">潮兽离开时留下大量贝壳，</view>
+  <view class="popUpWindowsText2">点击掉落的贝壳换取</view>
+  <view class="popUpWindowsText2">潮力值和更多礼物吧!</view>
+  <view class="popUpWindowsButton" bindtap="clickPopUpWindowsButton">开始抢贝壳</view>
+</view>

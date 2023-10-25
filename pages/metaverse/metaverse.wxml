@@ -1,3 +1,2 @@
 <!--pages/game1.wxml-->
-<!-- <web-view src="{{src}}"> </web-view> -->
-<web-view src="{{src}}"  bindmessage="handleGetMessage"> </web-view>
+<web-view bindmessage="getMessage"  src="{{src}}"> </web-view>

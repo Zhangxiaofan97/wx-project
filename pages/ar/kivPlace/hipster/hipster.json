@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "kivicube-slam": "plugin://kivicube-slam/kivicube-slam"
+  },
+  "pageOrientation": "portrait",
+  "navigationStyle": "custom"
+}

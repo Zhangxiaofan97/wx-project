@@ -1,36 +1,54 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/aboutUs/aboutUs",
+    "pages/myInformation/myInformation",
     "pages/shoppingMall/shoppingMall",
-    "pages/metaverse/metaverse",
-    "pages/login/login",
     "pages/userServiceAgreement/userServiceAgreement",
-    "pages/privacyAgreement/privacyAgreement"
+    "pages/privacyAgreement/privacyAgreement",
+    "pages/offlineLargeScreen/offlineLargeScreen",
+    "pages/mechanicalScreen/mechanicalScreen",
+    "pages/pinchFace/pinchFace",
+    "pages/commonLogin/commonLogin",
+    "pages/blockChain/blockChain",
+    "pages/skybridge/skybridge",
+    "pages/h5Game/h5Game",
+    "pages/ar/arHomePage/arHomePage",
+    "pages/ar/matchingPage/matchingPage",
+    "pages/ar/hipsterMapPage/hipsterMapPage",
+    "pages/liveVideo/liveVideo",
+    "pages/shareImage/shareImage"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/ar/kivPlace",
+      "pages": [
+        "hipster/hipster",
+        "hipsterPlace/hipsterPlace",
+        "view/viewPhoto"
+      ],
+      "plugins": {
+        "kivicube-slam": {
+          "version": "1.4.3",
+          "provider": "wx12ad8a61f049ea02"
+        }
+      }
+    }
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "授权位置信息"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
+    "navigationStyle": "default",
     "navigationBarTitleText": "",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#666666",
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/shoppingMall/shoppingMall",
-        "text": "商城"
-      },
-      {
-        "pagePath": "pages/aboutUs/aboutUs",
-        "text": "我的"
-      }
-    ]
+    "navigationBarTextStyle": "black",
+    "pageOrientation": "auto"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

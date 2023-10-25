@@ -1,0 +1,51 @@
+<view class="body">
+  <!-- 背景轮播图 -->
+  <swiper class="swiper" circular autoplay="true" bindchange="changeIndicatorDots">
+    <block wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <swiper-item>
+        <image class="swiperImage" src="{{item.imgUrl}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 指示点 -->
+  <view class="swiperIndicationPointBox">
+    <view class="indicationPoint {{index==current ? 'pitchOnindIcationPoint' : ''}}" wx:for="{{swiperList}}" wx:for-item="item" wx:for-index="index" wx:key="index"></view>
+  </view>
+
+  <!-- 返回按钮 -->
+  <view class="backButton" style="top: {{backButtonLocationtop}}px;">
+    <view class="backBox" bindtap="backPage"></view>
+    <view class="backHomeBox" bindtap="goHomePage"></view>
+    <image class="back" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//backButton.png" mode=""></image>
+    <view class="segmentation"></view>
+    <image class="backHome" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//backHome.png" mode=""></image>
+  </view>
+
+
+  <!-- 新手弹窗 -->
+  <view class="course" wx-if="{{courseState !== 0}}">
+    <view class="courseText">
+      <p class="p">欢迎回来</p>
+      <p class="p">你的专属潮兽已经等你好久啦。</p>
+    </view>
+  </view>
+
+  <!-- 功能按钮 -->
+  <view class="buttonBox">
+    <view class="buttonBox2" bindtap="goHipsterMap">
+      <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//preview.png"></image>
+      <view>潮兽一览</view>
+    </view>
+    <view class="buttonBox2" bindtap="goBecomeAttachedToPage">
+      <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//become.png"></image>
+      <view>结缘潮兽</view>
+    </view>
+    <view class="buttonBox2" bindtap="goHipsterPlace">
+      <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//group_photo.png"></image>
+      <view>潮兽合影</view>
+    </view>
+  </view>
+
+
+</view>

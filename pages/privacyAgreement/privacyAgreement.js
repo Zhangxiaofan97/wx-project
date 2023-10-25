@@ -15,6 +15,15 @@ Page({
 
   },
 
+
+  // 分享功能
+  onShareAppMessage(){
+    return{
+      title:'潮之岛元宇宙',
+      path:'/pages/index/index'
+    }
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

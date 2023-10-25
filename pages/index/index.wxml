@@ -1,42 +1,13 @@
-<view class="home">
-  <view class="header">
-  <image src="/images/index/青岛2 (2).jpg" mode="aspectFill" class="header-bg" />
-  <view style="height: {{navHeight}}px;">
-    <view style="height: {{navObj}}px;padding-top: {{navTop}}px;padding-right:{{navObjWidth+5}}px;">
-      <view class="head-back flex-row j_b" bindtap="scanCode">
-      <image src="/images/index/扫描.jpg" />
-      <!-- <text class="saoma">{{text}}</text> -->
-      </view>
-    </view>
-  </view>
+
+<view class="container">
+
+  <button type="primary" class="skipButton" bindtap="skipdongHua">
+  进入元宇宙
+  </button>
+
 </view>
 
-<view class="container12">
-<view class="button1" bindtap="enterFirst">
-  <image src="/images/index/icon1.jpg"  alt="" class="button1Image"/>
-  <view class="buttonwenzi">
-    <text class="buttonwenziTitle">元宇宙</text>
-    <text class="buttonwenziText">畅游虚拟新世界</text>
-  </view>
-</view>
 
-<view class="button1">
-  <image src="/images/index/icon2.jpg"  alt="" class="button1Image" />
-  <view class="buttonwenzi">
-    <text class="buttonwenziTitle">AR</text>
-    <text class="buttonwenziText">打破次元壁</text>
-  </view>
-</view>
-
-<view class="button1">
-  <image src="/images/index/icon3.jpg"  alt="" class="button1Image" />
-  <view class="buttonwenzi">
-    <text class="buttonwenziTitle">角色</text>
-    <text class="buttonwenziText">创建专属角色</text>
-  </view>
-</view>
-</view>
-</view>
 
 
 

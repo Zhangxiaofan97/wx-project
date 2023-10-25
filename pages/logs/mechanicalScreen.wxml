@@ -1,0 +1,40 @@
+
+<view class="container">
+
+<view class="tips" wx:if="{{viewFlag}}">
+  <text class="titleText">本场潮舞秀：{{name}}</text>
+  <text  class="titleText">舞者位剩余数：{{number}} </text>
+</view>
+
+<view class="barrageReview" wx:if="{{!viewFlag}}">
+  <text class="barrageViewText">选择发送弹幕</text>
+
+  <view>
+    <view class="barrageReview">
+      <button type="primary" class="barrageReviewButton">巨星在民间</button>
+
+      <button type="primary" class="barrageReviewButton">C位出道</button>
+
+      <button type="primary" class="barrageReviewButton">当代舞王</button>
+
+      <button type="primary" class="barrageReviewButton">YYDS</button>
+
+      <button type="primary" class="barrageReviewButton">SLAY全场</button>
+
+      <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/heart.png" class="heart"/>
+
+    </view>
+     
+
+    <view>
+    </view>
+
+  </view>
+  
+
+</view>
+
+<button type="primary" bindtap="joinMechanicalScreen" wx:if="{{viewFlag}}">加入</button>
+
+</view>
+

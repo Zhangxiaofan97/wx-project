@@ -1,0 +1,218 @@
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+}
+
+.textBox {
+  width: 558rpx;
+  height: 122rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12rpx;
+  position: absolute;
+  top: 224rpx;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.textBox view {
+  width: 306rpx;
+  height: 96rpx;
+  color: #FFFFFF;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.hipsterBox {
+  width: 100vw;
+  background-color: rgba(74, 112, 150, 0.7);
+  border-radius: 48rpx 48rpx 0rpx 0rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999999;
+  overflow: hidden;
+}
+
+.packUpBox {
+  width: 100vw;
+  height: 88rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.hipsterBoxList {
+  width: 698rpx;
+  height: 352rpx;
+}
+
+.hipsterBoxList image {
+  width: 96rpx;
+  height: 96rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 15.56px solid transparent;
+  border-right: 15.56px solid transparent;
+  border-bottom: 9px solid #FFFFFF;
+  transform: rotate(180deg);
+  margin-top: 28rpx;
+}
+
+.cameraImage {
+  width: 96rpx;
+  height: 96rpx;
+  position: absolute;
+  right: 28rpx;
+  bottom: 764rpx;
+  z-index: 99999;
+}
+
+.upwardImage{
+  width: 96rpx;
+  height: 96rpx;
+  position: absolute;
+  right: 28rpx;
+  bottom: 534rpx;
+  z-index: 99999;
+}
+
+.downwardImage{
+  width: 96rpx;
+  height: 96rpx;
+  position: absolute;
+  right: 28rpx;
+  bottom: 406rpx;
+  z-index: 99999;
+}
+
+.resetHipster {
+  width: 96rpx;
+  height: 96rpx;
+  position: absolute;
+  right: 28rpx;
+  bottom: 278rpx;
+  z-index: 99999;
+}
+
+.moreHipster {
+  width: 96rpx;
+  height: 96rpx;
+  position: absolute;
+  right: 28rpx;
+  bottom: 150rpx;
+  z-index: 99999;
+}
+
+.slam {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.uploadBox {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadBox2 {
+  width: 240rpx;
+  height: 244rpx;
+  background-color: rgba(76, 76, 76, 1);
+  border-radius: 28rpx;
+  position: relative;
+}
+
+.uploadBox2 image {
+  width: 74rpx;
+  height: 74rpx;
+  position: absolute;
+  left: 50%;
+  top: 46rpx;
+  transform: translate(-50%, 0%);
+}
+
+.uploadBox2 view {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 147rpx;
+  text-align: center;
+  color: #ffffff;
+}
+.backButton {
+	width: 174rpx;
+	height: 64rpx;
+	position: absolute;
+	top: 102rpx;
+	left: 12rpx;
+	background-color: rgba(255, 255, 255, 0.60);
+	z-index: 9999999;
+	border-radius: 50rpx;
+}
+.backButton .back {
+	width: 22rpx;
+	height: 36rpx;
+	position: absolute;
+	left: 34rpx;
+	top: 50%;
+	-webkit-transform: translate(0%, -50%);
+	        transform: translate(0%, -50%);
+}
+.backButton .backBox{
+	width: 88rpx;
+	height: 64rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999999;
+}
+.backButton .segmentation {
+	width: 1rpx;
+	height: 37rpx;
+	background-color: rgba(0, 0, 0, 0.20);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+.backButton .backHome {
+	width: 46rpx;
+	height: 44rpx;
+	position: absolute;
+	right: 20rpx;
+	top: 50%;
+	-webkit-transform: translate(0%, -50%);
+	        transform: translate(0%, -50%);
+}
+.backButton .backHomeBox{
+	width: 84rpx;
+	height: 64rpx;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 9999999;
+}
+

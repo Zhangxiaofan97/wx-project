@@ -1,0 +1,128 @@
+<view class="container">
+
+<!-- <view class="causeView" wx:if="{{result}}">
+<image src="{{background1}}" class="casueBackground"/>
+
+<view class="causeViewInner">
+
+ <view class="causeViewInnerImageView2">
+  <view class="causeViewInnerImageView2Inner" bindtap="createImage">
+    <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/clickHere.png" class="takePhotosButton2" wx:if="{{clickHereButton}}"/>
+  </view>
+ </view>
+
+ <view class="causeViewInnerImageView">
+   <image src="{{avatarUrl}}" class="causeViewInnerImageViewImage" />
+   <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/ui2.png" class="mask"  wx:if="{{maskSwitch}}" />
+
+   <view class="takePhotosView">
+    <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/takePhotos.png" class="takePhotosButton" bindtap="chooseOneImg" />
+   </view>
+
+   <view style="width: 100%; height: 160rpx; display: flex; margin-top: 40rpx;">
+   <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/left.png" class="arrow" bindtap="changeSex"  />
+   <image src="{{sexImgUrl}}" class="sexImage" bindtap="changeSex" />
+   <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/left.png" class="arrow" bindtap="changeSex" style="transform:rotate(180deg);"/>
+   </view>
+
+ </view>
+
+</view>
+
+</view> -->
+
+<!-- <view class="resultView" wx:if="{{!result}}">
+<image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/background.jpg" class="resultViewBackground"/>
+
+<view class="resultViewImageView">
+  <view class="resultViewImageViewInner">
+    <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/layer.png" class="resultViewImage"/>
+
+    <view class="resultViewImageViewInnerView">
+      <view class="resultViewImageViewInnerView1">
+        <text class="resultViewImageViewInnerView1Text resultViewImageViewInnerView1Text2"> 你在潮之岛的身份居然是:</text>
+        <text class="resultViewImageViewInnerView1Text">生成时间：{{userInfo.time}}</text>
+       <text class="resultViewImageViewInnerView1Text"> 身份:{{userInfo.name}}</text>
+      </view>
+
+      <view class="resultViewImageViewInnerView2">
+       
+        <view class="resultViewImageViewInnerView2Text" style="margin-top: 20rpx;"></view>
+
+        <view style="display: flex;align-items: center;">
+          <input type="text" value="{{userInfo.duty}}" style="width: 156rpx;min-height:2rem;text-align: center; font-size: 32px; color: white;"focus="{{fUnit}}" />
+          <image src="../../images/image/edit.png"  class="editImage" bindtap="editName"/>
+        </view>
+
+      
+      </view>
+
+
+      <view class="resultViewImageViewInnerView3">
+
+      <view class="resultViewImageViewInnerView3Inner"></view>
+
+      <view class="resultViewImageViewInnerView3Inner resultViewImageViewInnerView3Inner2">
+        <image src="{{userInfo.imgBig}}"  class="resultViewImageViewInnerView3InnerImage2"/>
+      <text class="resultViewImageViewInnerView3InnerText">恭喜成为第 {{userInfo.generateId}}个新潮岛民</text>
+      </view>
+
+      <view class="resultViewImageViewInnerView3Inner resultViewImageViewInnerView3Inner3">  
+        <image src="../../images/image/qrcode.png"  class="resultViewImageViewInnerView3InnerImage3"/>
+      <text class="resultViewImageViewInnerView3InnerText  resultViewImageViewInnerView3InnerText3">看看我的岛民形象</text>
+      </view>
+
+
+      </view>
+
+    </view>
+  </view>
+
+
+  <view class="buttonGroup">
+    <button
+    open-type="share"
+    class="buttonGroupButton">分享</button>
+
+    <button
+    class="buttonGroupButton"
+    bindtap="photoAgain"
+    >重试</button>
+  </view>
+
+</view>
+
+
+</view> -->
+
+
+<span class="offlineLargeScreenText offlineLargeScreenText2">
+元宇宙之门打卡成功！
+</span>
+<span class="offlineLargeScreenText" style="margin-bottom: 100rpx;">
+幸运同时降临！
+</span>
+
+<image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/coupon.png"  class="coupon"/>
+
+
+
+
+<span class="offlineLargeScreenText" style="margin-top: 80rpx;">
+立即带着你的数字人
+</span>
+<span class="offlineLargeScreenText">
+进入元宇宙背包查看吧！
+</span>
+<span class="offlineLargeScreenText">
+还有更多惊喜与奖品
+</span>
+<span class="offlineLargeScreenText" style="margin-bottom: 150rpx;">
+等你解锁哦~
+</span>
+
+<button bindtap="unlockTakePhoto" class="enterButton">
+进入元宇宙
+</button>
+
+</view>

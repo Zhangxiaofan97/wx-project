@@ -1,27 +1,50 @@
 <!--pages/login/login.wxml-->
 <view class="container">
-  <view class="usermotto">
-    <button type="primary" 
-    open-type="getUserInfo"  
-    bindtap="getUserProfile"
+
+<image src="{{ background1 }}" class="loginImg"  />
+
+
+  <view class="usermotto" wx:if="{{!showName}}">
+    <button
+    type="primary"
+    open-type="getPhoneNumber"
+    bindgetphonenumber="getPhoneNumber"
     disabled="{{buttonChecked}}" 
-    > 授权登录</button>
+    > <span>授权登录</span>  </button>
 
     <checkbox-group 
     bindchange="checkHandler"
-    style="margin-top: 20rpx; display: flex; align-items: center;"
+    style="margin-top: 20rpx; display: flex; align-items: center; font-size: 13px;"
     >
       <checkbox  checked="{{!buttonChecked}}"/>
-      <span style=" display: flex;">
+      <span style="display: flex; color: white;">
         阅读并同意 
-        <navigator url="../userServiceAgreement/userServiceAgreement"  style="color: skyblue;">
-          《用户服务协议》</navigator>
-          <navigator url="../privacyAgreement/privacyAgreement"  style="color: skyblue;">
-            《隐私协议》
-            </navigator>
+        <navigator url="../userServiceAgreement/userServiceAgreement"  
+        style="color: skyblue;">
+          《服务协议》
+        </navigator>
+
+        <navigator url="../privacyAgreement/privacyAgreement"  
+        style="color: skyblue;">
+          《隐私政策》
+        </navigator>
       </span>
     </checkbox-group>
+  </view>
+
+  <view style="box-sizing: border-box; z-index:10;" wx:if="{{showName}}" >
+  
+	<input class="weui-input" focus="true" placeholder="请填写昵称" bindinput="bindKeyInput" style="border-radius: 10rpx; background-color:white; width: 330rpx;padding: 10rpx;margin-bottom: 50rpx;" />
+
+<view>
+<button 
+type="primary" 
+bindtap="GoToOfflineLargeScreen" 
+>完成登录</button>
 </view>
+
+
+  </view>
 </view>
 
 

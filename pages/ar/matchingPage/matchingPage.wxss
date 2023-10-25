@@ -1,0 +1,444 @@
+page {
+  overflow: hidden;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.imageBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.backArBox {
+  position: absolute;
+  top: 102rpx;
+  left: 0;
+  width: 186rpx;
+  height: 76rpx;
+  z-index: 9999999;
+}
+
+.backAr {
+  position: absolute;
+  top: 218rpx;
+  left: 0;
+  width: 186rpx;
+  height: 76rpx;
+  z-index: 2;
+}
+
+.hipsterBox {
+  position: absolute;
+  width: 108rpx;
+  height: 108rpx;
+  z-index: 3;
+}
+
+.hipsterBox .hipster {
+  width: 100%;
+  height: 100%;
+  border-radius: 23rpx;
+}
+
+.hipsterBox .beBestowedByHeaven {
+  position: absolute;
+  width: 72rpx;
+  height: 76rpx;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  bottom: 4rpx;
+}
+
+.beBestowedByHeaven-image {
+  animation: beBestowedByHeavens 2s infinite alternate;
+}
+
+@keyframes beBestowedByHeavens {
+  from {
+    opacity: 1; 
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+.activateBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.activateText {
+  position: absolute;
+  top: 328rpx;
+  width: 650rpx;
+  /* height: 456rpx; */
+  left: 50%;
+  -webkit-transform: translate(-50%, -0%);
+  transform: translate(-50%, -0%);
+  color: #ffffff;
+  font-size: 36rpx;
+  line-height: 76rpx;
+  letter-spacing: 4rpx;
+  text-align: center;
+  font-weight: 600;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.pickerBox {
+  position: absolute;
+  width: 402rpx;
+  height: 84rpx;
+  top: 812rpx;
+  left: 50%;
+  -webkit-transform: translate(-50%, -0%);
+  transform: translate(-50%, -0%);
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10rpx;
+}
+
+.pickerDate {
+  color: #333333;
+  font-size: 30rpx;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 84rpx;
+}
+
+.pickerDateColor {
+  color: #d90000;
+}
+
+.fingerprintBox {
+  position: absolute;
+  width: 304rpx;
+  height: 230rpx;
+  top: 982rpx;
+  left: 50%;
+  -webkit-transform: translate(-50%, -0%);
+  transform: translate(-50%, -0%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fingerprintBox image {
+  width: 144rpx;
+  height: 144rpx;
+}
+
+.fingerprintBox .text {
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.sea_wave {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+
+.activateBox .hipsterText1 {
+  width: 100vw;
+  height: 90rpx;
+  position: absolute;
+  left: 0;
+  font-size: 76rpx;
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: 13.4rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
+
+.activateBox .hipsterText2 {
+  width: 100vw;
+  height: 138rpx;
+  position: absolute;
+  left: 0;
+  font-size: 116rpx;
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: 13.4rpx;
+  line-height: 138rpx;
+  text-align: center;
+}
+
+.activateBox .hipsterText3 {
+  width: 100vw;
+  height: 60rpx;
+  position: absolute;
+  left: 0;
+  font-size: 44rpx;
+  color: #FFFFFF;
+  letter-spacing: 13.4rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.activateBox .hipsterImageBox {
+  width: 420rpx;
+  height: 420rpx;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -0%);
+  transform: translate(-50%, -0%);
+}
+
+.activateBox .introduceBox {
+  width: 650rpx;
+  height: 220rpx;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -0%);
+  transform: translate(-50%, -0%);
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activateBox .shadowIntroduceBox {
+  width: 650rpx;
+  height: 220rpx;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-51.6%, -0%);
+  transform: translate(-51.6%, -0%);
+  background-color: #3D2F66;
+  border-radius: 6rpx;
+}
+
+.activateBox .introduceBox view {
+  display: flex;
+  flex-direction: column;
+  width: 590rpx;
+  height: 182rpx;
+}
+
+.activateBox .introduceBox text {
+  color: #333333;
+  font-size: 28rpx;
+  line-height: 42rpx;
+  height: 84rpx;
+}
+
+.activateBox .buttonBox {
+  width: 100vw;
+  position: absolute;
+  top: 1332rpx;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonBox .button1 {
+  width: 280rpx;
+  height: 96rpx;
+  line-height: 60rpx;
+  background-color: #FFFFFF;
+  border-radius: 62rpx;
+  color: #4A8EB4;
+  font-size: 36rpx;
+  border: 1px solid rgba(74, 142, 180, 1);
+}
+
+.buttonBox .button2 {
+  width: 350rpx;
+  height: 96rpx;
+  line-height: 62rpx;
+  background-color: #FF9600;
+  border-radius: 62rpx;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+
+.activateBox .becomeAttachedToImage {
+  width: 498rpx;
+  height: 498rpx;
+  position: absolute;
+  top: 478rpx;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.activateBox .becomeAttachedToText {
+  width: 616rpx;
+  height: 120rpx;
+  font-size: 44rpx;
+  color: #FFFFFF;
+  position: absolute;
+  top: 1064rpx;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+
+.activateBox .effect {
+  width: 532rpx;
+  height: 96rpx;
+  line-height: 64rpx;
+  color: #4A8EB4;
+  border-radius: 62rpx;
+  position: absolute;
+  bottom: 300rpx;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.activateBox .effect2 {
+  width: 532rpx;
+  height: 96rpx;
+  line-height: 64rpx;
+  background-color: #D056EE;
+  color: #FFFFFF;
+  border-radius: 62rpx;
+  position: absolute;
+  bottom: 156rpx;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.activateBox .popUpPindowsBox {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.activateBox .popUpPindowsBox .popUpPindows {
+  width: 640rpx;
+  height: 320rpx;
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+.activateBox .popUpPindowsBox .popUpPindowsText {
+  width: 544rpx;
+  height: 176rpx;
+  color: #333333;
+  text-align: center;
+  margin-top: 32rpx;
+  white-space: pre-wrap;
+  margin-left: 48rpx;
+  font-weight: 500;
+  line-height: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.activateBox .popUpPindowsBox .popUpPindowsText2 {
+  width: 544rpx;
+  height: 96rpx;
+  color: #333333;
+  text-align: center;
+  margin-top: 64rpx;
+  margin-bottom: 48rpx;
+  white-space: pre-wrap;
+  margin-left: 48rpx;
+  font-weight: 500;
+  line-height: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.activateBox .popUpPindowsBox .popUpPindows .popUpPindowsButtomBox {
+  width: 640rpx;
+  height: 110rpx;
+  display: flex;
+  border-top: 2rpx solid #E5E5E5;
+}
+
+.popUpPindowsButtomBox .popUpPindowsButtom1 {
+  height: 110rpx;
+  color: #576B95;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 110rpx;
+  flex: 1;
+  border-right: 1px solid #E5E5E5;
+}
+
+.popUpPindowsButtomBox .popUpPindowsButtom2 {
+  height: 110rpx;
+  color: #D056EE;
+  font-size: 34rpx;
+  text-align: center;
+  line-height: 110rpx;
+  flex: 1;
+}
+
+.hipsteSite {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+}
+
+.floating-image {
+  animation: floatAnimation 2s infinite alternate;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+}
+
+.floating-image-animation0 {
+  animation-delay: 0s;
+}
+
+.floating-image-animation1 {
+  animation-delay: 1s;
+}
+
+.floating-image-animation2 {
+  animation-delay: 0.5s;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+  }
+
+  100% {
+    transform: translate(-50%, 5px);
+    -webkit-transform: translate(-50%, 5px);
+  }
+}

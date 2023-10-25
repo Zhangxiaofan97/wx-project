@@ -5,21 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    src:'https://comicomi.world/h5/index.html'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
-  },
+  onLoad(options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
 
+  },
+
+
+  // 分享功能
+  onShareAppMessage(){
+    return{
+      title:'潮之岛元宇宙',
+      path:'/pages/index/index'
+    }
   },
 
   /**

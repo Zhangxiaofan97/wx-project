@@ -3,54 +3,69 @@
 const app = getApp();
 Page({
   data: {
-    // 导航栏高度
-     navHeight: app.globalData.navHeight,
-    // 导航栏距离顶部距离
-     navTop: app.globalData.navTop,
-    // 胶囊的高度
-     navObj: app.globalData.navObj,
-
-    // 胶囊宽度+距右距离
-     navObjWid: app.globalData.navObjWid,
-     text:'扫码',
-
-    //  这里是登录
-     buttonChecked:true,
-     userInfo:null,
-
-
   },
 
-  // 左上角的扫码功能
-  scanCode(){
-    wx.scanCode({success: (res) => {
-      console.log(res)
-      console.log(app,'这是app')
+  onLoad(options) {
+
+    // 检查缓存是否有登录信息
+    let comiComiUser=wx.getStorageSync("comiComiUser")
+    if(comiComiUser){
+      console.log("开机画面有登录信息")
+    }else {
+      wx.redirectTo({
+        url: '../commonLogin/commonLogin',
+      })
     }
-  })
-  },
-
-  // 进入元宇宙
-  enterFirst(e){
-    let user= wx.getStorageSync("user")
-    if(user){
-      console.log(user.nickName,'这是user')
-      wx.navigateTo({
-        url: '../metaverse/metaverse'
-      })    
-    }else{
-      wx.navigateTo({
-        url: '../login/login'
-      })                                       
-    }
-
-
     
-  }
+  },
 
+  // 分享功能
+  onShareAppMessage(){
+    return{
+      title:'潮之岛元宇宙',
+      path:'/pages/index/index'
+    }
+  },
+
+  onShow() {
+    wx.hideHomeButton()
+  },
 
  
- 
+
+
+  skipdongHua(){
+
+    wx.redirectTo({
+      url: '../pinchFace/pinchFace'
+    })
+
+    //  wx.redirectTo({
+    //   url: '../shareImage/shareImage'
+    // })  
+
+    // wx.redirectTo({
+    //   url: '../myInformation/myInformation'
+    // }) 
+
+    // wx.redirectTo({
+    //   url: '../offlineLargeScreen/offlineLargeScreen'
+    // }) 
+
+    // wx.redirectTo({
+    //   url: '../skybridge/skybridge'
+    // }) 
+
+    // wx.redirectTo({
+    //   url: '../mechanicalScreen/mechanicalScreen'
+    // }) 
+
+    //  wx.redirectTo({
+    //   url: '../liveVideo/liveVideo'
+    // }) 
+
+  },
 
   
+
 })

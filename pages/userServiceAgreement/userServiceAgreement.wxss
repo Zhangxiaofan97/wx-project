@@ -1,1 +1,7 @@
 /* pages/userServiceAgreement/userServiceAgreement.wxss */
+.container{
+  padding: 0rpx 20rpx;
+}
+text{
+  font-size: 14px;
+}

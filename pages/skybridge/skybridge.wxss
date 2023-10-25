@@ -1,0 +1,33 @@
+/* pages/skybridge/skybridge.wxss */
+.topContainer {
+  align-items: center;
+  width : 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skybridgeTitleTextStyle {
+  color: #000000;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.addressTextStyle {
+  font-size : large;
+}
+
+.chapterButtonListStyle {
+  flex-direction: column;
+  display: flex;
+  margin-top : 100rpx;
+}
+
+.chapterButtonListRowStyle {
+  display: flex;
+  margin-top: 15rpx;
+  justify-content: center;
+}
+
+.chapterButtonStyle {
+  display:inline-block;
+}

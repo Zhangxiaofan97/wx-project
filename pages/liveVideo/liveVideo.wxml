@@ -1,0 +1,10 @@
+<!--pages/liveVideo/liveVideo.wxml-->
+<view class="container">
+
+  <button type="primary" 
+  bindtap="jumpToLive"  style="border-radius: 100rpx;">
+  跳转直播
+  </button>
+
+
+</view>

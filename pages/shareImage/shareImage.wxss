@@ -1,0 +1,10 @@
+.container{
+  display: flex;
+  justify-content: space-around;
+}
+.shareImage{
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 20rpx;
+}
+

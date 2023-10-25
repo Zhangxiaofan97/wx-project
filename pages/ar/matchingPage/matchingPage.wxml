@@ -1,0 +1,101 @@
+<view class="body">
+  <image class="imageBox" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//arSkyBg.jpg"></image>
+  <image bindtap="backPage" class="backArBox" style="top: {{backButtonLocationtop}}px;" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image/backAr.png"></image>
+
+  
+  <!-- 所在地址 -->
+  <image class="hipsteSite floating-image floating-image-animation{{index}}" style="top: {{item[2]}}px;width: {{item[0]}}px;height: {{item[1]}}px;" wx:for="{{hipsteSiteTop}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-item="{{item}}" data-index="{{index}}" src="{{item[3]}}"/>
+
+  <!-- 潮兽图标 -->
+  <view class="hipsterBox" style="width: {{hipsterboxStyle[index][0]}}px;height: {{hipsterboxStyle[index][1]}}px;top: {{hipsterboxStyle[index][2]}}px;left:{{hipsterboxStyle[index][3]}}px" wx:for="{{hipster}}" wx:for-item="item" wx:for-index="index" wx:key="index" data-item="{{item}}" data-index="{{index}}" bindtap="clickHipster">
+    <image class="hipster" src="{{item.hipste_url}}"></image>
+    <image wx:if="{{item.meet == 1 || item.type == 1}}" class="beBestowedByHeaven beBestowedByHeaven-image" src="{{item.type == 1 ?'https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image/sole.png':'https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image/know.png'}}"></image>
+  </view>
+
+  <!-- 海浪 -->
+  <image class="sea_wave" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image/sea_waveorg.jpeg" style="{{sea_wave}}"></image>
+
+  <!-- 初始激活页面 -->
+  <view wx:if="{{activateBoxType}}" class="activateBox">
+    <view class="activateText" style="{{activateTextTop}}">
+      <text>来潮宇宙找到那个注定与</text>
+      <text>你结缘的潮兽吧,</text>
+      <text>开始拥有潮能力!</text>
+      <text>做一个潮宇宙的弄潮儿!</text>
+    </view>
+
+    <view wx:if="{{showType}}" class="pickerBox">
+      <picker mode="date" value="{{date}}" start="1900-01-01" end="2024-01-01" bindchange="bindDateChange">
+        <view class="pickerDate {{date == '请输入您的生日' ? 'pickerDateColor' : ''}}">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+
+    <view wx:if="{{showType}}" class="fingerprintBox">
+      <image bindtouchstart="onTouchStart" bindtouchend="onTouchEnd" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image/fingerprint.png"></image>
+      <view class="text">
+        <text>长按激活潮力</text>
+        <text>匹配你的专属潮兽,</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 匹配成功页面 -->
+  <view wx:if="{{matchingBoxType}}" class="activateBox">
+    <text wx-if="{{hipsterPreview.type == 1}}" class="hipsterText1" style="top: {{screenHeight/(812/86)}}px;">天赐</text>
+    <text class="hipsterText2" style="top: {{screenHeight/(812/126.5)}}px;">{{hipsterPreview.name}}</text>
+    <text class="hipsterText3" style="top: {{screenHeight/(812/200)}}px;">所在地：{{hipsterPreview.address}}</text>
+
+    <image class="hipsterImageBox" style="top: {{screenHeight/(812/263)}}px;" src="{{hipsterPreview.big_url}}"></image>
+
+    <view class="shadowIntroduceBox" style="top: {{screenHeight/(812/517)}}px;"></view>
+    <view class="introduceBox" style="top: {{screenHeight/(812/522)}}px;">
+      <view>
+        <text>象征：{{hipsterPreview.symbolize}}</text>
+        <text>性格：{{hipsterPreview.character}}</text>
+        <text>潮能力：{{hipsterPreview.capacity}}</text>
+      </view>
+    </view>
+
+    <view class="buttonBox" style="top: {{screenHeight/(812/666)}}px;">
+      <button class="button2" bindtap="goMap">查看潮兽所在地</button>
+      <button class="button1" bindtap="blckButton">更多潮兽</button>
+    </view>
+  </view>
+
+  <!-- 结缘回来的页面 -->
+  <view wx:if="{{becomeAttachedTo}}" class="activateBox">
+    <image class="becomeAttachedToImage" style="top: {{screenHeight/(812/239)}}px;" src="{{hipsterList.hipsterImage}}"></image>
+    <view class="becomeAttachedToText" style="top: {{screenHeight/(812/532)}}px;">
+      {{hipsterList.hipsterType === '1' ? '恭喜您，经过一番寻觅与互动，成功与'+hipsterList.hipsterName+'结缘' : '您已领取'+hipsterList.hipsterName +'的贝壳'}}
+    </view>
+    <button class="effect" bindtap="clickWhy" style="top: {{screenHeight/(812/614)}}px;">潮力值有什么用</button>
+    <button class="effect2" bindtap="blckButton" style="top: {{screenHeight/(812/686)}}px;">寻找更多潮兽</button>
+
+    <!-- 弹窗 -->
+    <view class="popUpPindowsBox" wx:if="{{popUpPindowsBoxType}}">
+      <view class="popUpPindows">
+        <view wx:if="{{hipsterList.hipsterType === '1'}}" class="popUpPindowsText">
+          <text>{{ '成功结缘' }}</text>
+          <text>{{ '潮力值+' }}{{hipsterList.hipsterNumber}}</text>
+          <text>{{ '潮兽已出现在您的元宇宙' }}</text>
+        </view>
+        <view wx:if="{{hipsterList.hipsterType === '0'}}" class="popUpPindowsText2">
+          <text>{{ '红包奖励' }}</text>
+          <text>{{ '潮力值+' }}{{hipsterList.hipsterNumber}}</text>
+        </view>
+        <view wx:if="{{hipsterList.hipsterType === '2'}}" class="popUpPindowsText2">
+          <text>{{ '来自潮宇宙的神秘力量，' }}</text>
+          <text>{{'拥有潮力，你将在元宇宙成为弄潮儿'}}</text>
+        </view>
+        <view class="popUpPindowsButtomBox">
+          <view class="popUpPindowsButtom1" bindtap="backPopUpPindowsButtom">稍后再去</view>
+          <view class="popUpPindowsButtom2"bindtap="goyyz">前往元宇宙</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

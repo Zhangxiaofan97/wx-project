@@ -1,0 +1,9 @@
+<view class="container">
+
+  <image src="{{imageSrc}}" class="shareImage"/>
+
+  <button type="primary" bindtap="shareImageFunction" class="buttonMargin">分享或保存图片</button>
+
+
+</view>
+

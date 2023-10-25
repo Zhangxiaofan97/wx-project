@@ -1,2 +1,2 @@
 <!--pages/shoppingMall.wxml-->
-<text>pages/shoppingMall.wxml</text>
+<web-view src="{{src}}"> </web-view>

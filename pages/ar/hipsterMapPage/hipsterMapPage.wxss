@@ -1,0 +1,92 @@
+
+.body {
+	width: 100vw;
+	height: 100vh;
+}
+.backButton {
+	width: 174rpx;
+	height: 64rpx;
+	position: absolute;
+	top: 102rpx;
+	left: 12rpx;
+	background-color: rgba(255, 255, 255, 0.60);
+	z-index: 9999999;
+	border-radius: 50rpx;
+}
+.backButton .back {
+	width: 22rpx;
+	height: 36rpx;
+	position: absolute;
+	left: 34rpx;
+	top: 50%;
+	-webkit-transform: translate(0%, -50%);
+	        transform: translate(0%, -50%);
+}
+.backButton .backBox{
+	width: 88rpx;
+	height: 64rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999999;
+}
+.backButton .segmentation {
+	width: 1rpx;
+	height: 37rpx;
+	background-color: rgba(0, 0, 0, 0.20);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+.backButton .backHome {
+	width: 46rpx;
+	height: 44rpx;
+	position: absolute;
+	right: 20rpx;
+	top: 50%;
+	-webkit-transform: translate(0%, -50%);
+	        transform: translate(0%, -50%);
+}
+.backButton .backHomeBox{
+	width: 84rpx;
+	height: 64rpx;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 9999999;
+}
+.mapBox {
+	width: 100vw;
+	height: 100vh;
+}
+.buttonBox {
+	width: 100vw;
+	position: absolute;
+	bottom: 190rpx;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	z-index: 9999;
+}
+.buttonBox .button1 {
+  width: 335rpx;
+  height: 96rpx;
+  line-height: 60rpx;
+	background-color: #FFFFFF;
+	border-radius: 62rpx;
+	color: #4A8EB4;
+	font-size: 36rpx;
+	border: 1px solid rgba(74, 142, 180, 1);
+}
+.buttonBox .button2 {
+  width: 350rpx;
+  height: 96rpx;
+  line-height: 60rpx;
+	background-color: #FF9600;
+	border-radius: 62rpx;
+	color: #FFFFFF;
+	font-size: 36rpx;
+}
+

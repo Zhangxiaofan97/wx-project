@@ -1,0 +1,5 @@
+<view class="container">
+<web-view src="{{webViewSrc}}">
+</web-view> 
+</view>
+

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ec-canvas":"../../components/echarts/ec-canvas"
+  },
+  "pageOrientation": "landscape"
+}

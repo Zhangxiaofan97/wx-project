@@ -1,0 +1,36 @@
+<view class="container">
+
+
+
+<view class="barrageReview">
+  <text class="barrageViewText">选择发送弹幕</text>
+
+  <view>
+    <view class="barrageReview">
+      <button type="primary" class="barrageReviewButton" catchtap="SendBarrage" id="1">巨星在民间</button>
+
+      <button type="primary" class="barrageReviewButton" catchtap="SendBarrage" id="2">C位出道</button>
+
+      <button type="primary" class="barrageReviewButton" catchtap="SendBarrage" id="3">当代舞王</button>
+
+      <button type="primary" class="barrageReviewButton" catchtap="SendBarrage" id="4">YYDS</button>
+
+      <button type="primary" class="barrageReviewButton" catchtap="SendBarrage" id="5">SLAY全场</button>
+
+      <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/web/heart.png" class="heartIcon" catchtap="SendBarrage" id="0"/>
+
+
+    </view>
+     
+
+    <view>
+    </view>
+
+  </view>
+  
+
+</view>
+
+<button type="primary" bindtap="joinMechanicalScreen" wx:if="{{viewFlag}}">加入</button>
+
+</view>

@@ -1,0 +1,83 @@
+<!--pages/skybridge/skybridge.wxml-->
+<view class="topContainer" style="background-color: black; height:100%; background-image: url(\"{{imageBaseURL + '/bg.png'}}\"); background-size:100% 100%;">
+  <view class="chapterButtonListStyle" wx:if="{{chapterId == 0}}">
+    <view style="width:400rpx;">
+    <view style="width:400rpx; text-align: center;"><text class="skybridgeTitleTextStyle" style="color: black;">玩转潮宇宙</text></view>
+    <view style="width: 400rpx; text-align: center;"><text class="skybridgeTitleTextStyle" style="color: black;">霸屏台东天桥</text></view>
+  </view>
+  <view style="margin-top: 30rpx;">
+    <view class="chapterButtonListRowStyle" wx:for="{{4}}" wx:for-item="index0">
+      <view class="chapterButtonStyle" wx:for="{{1}}" wx:for-item="index1">
+        <button type="primary" class="chapterButtonStyle" data-id="{{chapterDatas[index0 * 1 + index1].id}}" data-index="{{index0 * 1 + index1}}" bindtap="onChapterChoose">{{chapterDatas[index0 * 1 + index1].name}}</button>
+      </view>
+    </view>
+  </view>
+  </view>
+  <!--
+  <view wx:for="{{chapterDatas}}" wx:if="{{chapterId==chapter.id}}" wx:for-item="chapter">
+    <scroll-view scroll-with-animation="true" scroll-y="true" style="height : 500px" scroll-anchoring="false">
+      <view wx:for="{{chapter.items}}" wx:for-item="item">
+        <image src="{{imageBaseURL + '/' + chapter.id + '/' + item.id + '.png'}}" style="width:300px" mode="aspectFit" bindtap="onItemChoose" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{chapter.id!=3}}"/>
+        <text class="addressTextStyle" bindtap="onItemChoose" data-id="{{item.id}}" data-index="{{index}}" wx:if="{{chapter.id==3}}">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  -->
+  <view wx:if="{{chapterId == chapterDatas[0].id}}" style="margin-top: 100rpx;">
+    <view style="width:600rpx;">
+    <view style="width:600rpx; text-align: center;"><text style="font-size: xx-large; font-weight: bold; color: black;">请选择您的</text></view>
+    <view style="width: 600rpx; text-align: center;"><text style="font-size: xx-large; font-weight: bold; color: black;">潮之岛「冲浪」宣言：</text></view>
+  </view>
+    <scroll-view scroll-with-animation="true" scroll-y="true" style="width:600rpx;hmin-height: 700rpx;" scroll-anchoring="false">
+    <view>
+      <view wx:for="{{chapterDatas[0].items}}" wx:for-item="item" style="margin-top:20px;width:600rpx;display:flex;justify-content: center;">
+        <image src="{{imageBaseURL + '/' + chapterDatas[0].id + '/' + item.id + '.png'}}" style="height:50px;" mode="heightFix" bindtap="onItemChoose" data-id="{{item.id}}" data-index="{{index}}"/>
+      </view>
+    </view>
+    </scroll-view>
+  </view>
+
+  <view wx:if="{{chapterId == chapterDatas[1].id}}" style="margin-top:20rpx;">
+    <view style="width:700rpx;">
+    <view style="width:100%; text-align: center;"><text style="font-size: x-large; font-weight: bold; color: black;">请选择您来自哪个城市？</text></view>
+  </view>
+  <!--style="width:700rpx; height:70%; display:flex;flex-direction: row;flex-wrap:wrap;justify-content: center; margin-top:60rpx;">-->
+    <scroll-view scroll-with-animation="true" scroll-y="true" style="width:700rpx;min-height: 800rpx;" scroll-anchoring="false">
+      <view wx:for="{{chapterDatas[1].items}}" wx:for-item="item" style="width:300rpx;display:inline-block; margin-right: 40rpx; margin-top:3rpx;">
+        <button type="primary" class="addressTextStyle" bindtap="onItemChoose" data-id="{{item.id}}" data-index="{{index}}" style="width:250rpx; height: 70rpx;">{{item.name}}</button>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view wx:if="{{chapterId == chapterDatas[2].id}}" style="margin-top:50rpx;">
+    <view style="width:600rpx;">
+    <view style="width:100%; text-align: center;"><text style="font-size: large; font-weight: bold; color: black;">潮宇宙中，有12只强大的潮兽，</text></view>
+    <view style="width: 100%; text-align: center;"><text style="font-size: large; font-weight: bold; color: black;">守护着这个宇宙，谁与您结缘呢？</text></view>
+  </view>
+  <view style="margin-left: 100rpx; margin-top: 30rpx;">
+    <scroll-view scroll-with-animation="true" scroll-y="true" style="min-height:520rpx;width:500rpx;" scroll-anchoring="false">
+      <view style="width: 180rpx;display:inline-block; margin-right: 30rpx;" wx:for="{{chapterDatas[2].items}}" wx:for-item="item">
+        <image src="{{imageBaseURL + '/' + chapterDatas[2].id + '/' + item.id + '.png'}}" style="height:90px" mode="heightFix" bindtap="onItemChoose" data-id="{{item.id}}" data-index="{{index}}"/>
+      </view>
+    </scroll-view>
+  </view>
+  </view>
+
+  <view wx:if="{{chapterId == chapterDatas[3].id}}" style="margin-top:50rpx;">
+    <view style="width:700rpx;">
+    <view style="width:100%; text-align: center;"><text style="font-size: x-large; font-weight: bold; color: black;">点燃属于您的心愿烟花，</text></view>
+    <view style="width: 100%; text-align: center;"><text style="font-size: x-large; font-weight: bold; color:black;">开启潮之岛狂欢夜！</text></view>
+  </view>
+  <view style="width:700rpx; margin-top: 50rpx;">
+    <scroll-view scroll-with-animation="true" scroll-y="true" style="min-height:500rpx;width:700rpx;" scroll-anchoring="false">
+        <view style="min-width:300rpx; width:fit-content; display:inline-block;align-items: center;" wx:for="{{chapterDatas[3].items}}" wx:for-item="item">
+        <view style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <image src="{{imageBaseURL + '/' + chapterDatas[3].id + '/' + item.id + '.png'}}" style="width:150px;;" mode="widthFix" bindtap="onItemChoose" data-id="{{item.id}}" data-index="{{index}}"/>
+          <!--<text style="font-size: medium; width:300rpx; color:black;">{{item.name}}</text>-->
+          <button type="primary" style="min-height: 60rpx; width:fit-content;" bindtap="onItemChoose" data-id="{{item.id}}" data-index="{{index}}">{{item.name}}</button>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  </view>
+</view>

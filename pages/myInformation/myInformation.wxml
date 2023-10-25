@@ -1,0 +1,157 @@
+<!--pages/aboutUs.wxml-->
+<view class="container">
+
+<view class="menu_boxView"> 
+
+<view class="menu_box">
+
+ <view class='menu1 {{menuTapCurrent=="0"?"borders":""}} {{menuTapCurrent=="0"?"menu3":""}}' data-current="0" catchtap="menuTap">
+ </view>
+ <view class='menu2 {{menuTapCurrent=="1"?"borders":""}} {{menuTapCurrent=="1"?"menu4":""}}' data-current="1" catchtap="menuTap">
+ 
+ </view>
+
+</view>
+
+<view class="tab1" hidden="{{menuTapCurrent!='0'}}">
+
+ <view class="myBackgroundView">
+
+
+ <view class="myBackgroundViewInner1">
+ 
+ <view class="myBackgroundViewInner1Left">
+
+  <view class="myBackgroundViewInner1LeftText">
+    <text class="myBackgroundViewInner1LeftTextTitle">我的勋章</text>
+    <text>记录我的成就</text>
+  </view>
+
+  <view class="myBackgroundViewInner1LeftImageView">
+  <image src="{{medalImage}}" class="myBackgroundViewInner1LeftImage"/>
+  </view>
+
+   
+
+
+ </view>
+
+ <view class="myBackgroundViewInner1Right">
+
+  <view class="ec-container">
+    <ec-canvas canvas-id="echart-line" ec="{{ec}}"></ec-canvas>
+  </view>
+
+ </view>
+
+
+ </view>
+
+
+ <view class="myBackgroundViewInner2">
+
+ <view class="myBackgroundViewInner2TitleView">
+
+  <text class="myBackgroundViewInner2Title1">当前等级</text>
+  <text class="myBackgroundViewInner2TitleLevel">{{level}}</text>
+  <text class="myBackgroundViewInner2Title1" style="margin-right: 40rpx;">级</text>
+
+   <text class="myBackgroundViewInner2Title2">超越了</text>
+   <text class="myBackgroundViewInner2TitlePercent" style="margin: 0 10rpx;">{{percent}}</text>  
+   <text class="myBackgroundViewInner2Title2">%的人</text>
+
+ </view>
+ 
+
+
+ <view class="progress-box">
+  <progress percent="{{processPercent}}" color="black" active stroke-width="15" border-radius="10" />
+</view>
+
+<view class="myBackgroundViewInner2TitleView2">
+
+  <view class="myBackgroundViewInner2TitleView2Inner">  
+    <text class="myBackgroundViewInner2TitleView2InnerText" style="margin-right: 40rpx;">{{tidalValue}}潮力值 
+    </text>  
+    <text class="myBackgroundViewInner2TitleView2InnerText">{{integral}}积分
+    </text>
+  </view>
+
+ 
+</view>
+
+ 
+
+ </view>
+
+
+
+ </view>
+
+</view>
+
+
+
+<view class="tab2" hidden="{{menuTapCurrent!='1'}}">
+  
+ <view class="myBackgroundView myBackgroundView3">
+ 
+ <view class="myBackgroundViewInner3">
+
+ <scroll-view scroll-y="true" class="myBackgroundViewInner3Inner">
+
+ <view 
+ class="myBackgroundViewInner3InnerView" 
+ style="height: 30%; color: #454545;" wx:for="{{myTaskList}}" wx:key="index">
+
+ <view style="width: 30%;padding-left: 10%;  display: flex; justify-content: left; align-items: center;">
+  <text class="needBold">{{item.missionTitle}}</text> 
+ </view>
+
+ <view style="width: 70%; display: flex;justify-content:space-between; align-items: center;">
+  <text class="needBold" wx:if="{{item.missionState==2}}">0/1</text>
+  <text class="needBold" wx:if="{{item.missionState==4}}">1/1</text>
+  <text class="needBold">{{item.missionDes}}</text>
+
+  <view style="height:100%;width: 13%; background-color:#F6E169; border-radius: 50%; display: flex; justify-content: center; align-items: center;"  wx:if="{{item.missionState==2}}" catchtap="goToOtherPage" id="{{item.type}}">前往</view>
+
+  <view style="height:100%;width: 13%; background-color: #F6E169; border-radius: 50%; display: flex; justify-content: center; align-items: center;" wx:if="{{item.missionState==4}}">领取奖励</view>
+ </view>
+ 
+ 
+
+ 
+
+ 
+ </view>
+
+ 
+ </scroll-view>
+
+ <!-- <view class="progress-box">
+  <progress
+  active 
+  percent="{{tidalPercent}}"    
+  activeColor="blue"   
+  stroke-width="15"
+  border-radius="10"
+  />
+ </view>
+
+<text class="myBackgroundViewInner3InnerViewText">本日获取潮力值上限{{tidalDayMaxValue}}/308
+</text> -->
+
+
+
+ 
+ </view>
+
+ </view>
+ 
+</view>
+
+</view>
+
+</view>
+
+

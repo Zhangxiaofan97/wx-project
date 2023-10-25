@@ -4,7 +4,7 @@
   "setting": {
     "compileHotReLoad": true,
     "urlCheck": false,
-    "bigPackageSizeSupport": true,
-    "useIsolateContext": true
-  }
+    "bigPackageSizeSupport": true
+  },
+  "libVersion": "2.30.4"
 }

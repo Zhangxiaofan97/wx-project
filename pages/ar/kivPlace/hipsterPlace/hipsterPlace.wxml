@@ -1,0 +1,52 @@
+<!-- <view class="page"></view> -->
+
+<kivicube-slam
+  class="slam"
+  license="{{license}}"
+  version="{{version}}"
+  downgrade="{{true}}"
+  bindready="ready"
+  binderror="error"
+/>
+
+<!-- 返回按钮 -->
+<view class="backButton" style="top: {{backButtonLocationtop}}px;">
+    <view class="backBox" bindtap="backPage"></view>
+    <view class="backHomeBox" bindtap="goHomePage"></view>
+    <image class="back" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//backButton.png" mode=""></image>
+    <view class="segmentation"></view>
+    <image class="backHome" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//backHome.png" mode=""></image>
+  </view>
+
+<view class="textBox">
+  <view>请将光标放置地面后选择潮兽</view>
+</view>
+
+<image class="cameraImage" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//camera.png" bindtap="onTakePhoto" />
+
+<image class="upwardImage" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//upward.png" bindtap="clickUpward" />
+
+<image class="downwardImage" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//downward.png" bindtap="clickCownward" />
+
+<image class="resetHipster" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//reset.png" bindtap="clickResetHipster" />
+
+<image class="moreHipster" src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//moreHipster.png" bindtap="clickMoreHipster" />
+
+<view class="hipsterBox" style="height: {{hipsterBoxHeight}}rpx;">
+  <view class="packUpBox">
+    <view class="triangle" bindtap="clickTriangle"></view>
+  </view>
+
+  <view class="hipsterBoxList">
+    <image wx:for="{{hipsterBoxList}}" wx:for-item="item" wx:for-index="index" wx:key="index" src="{{item.url}}" data-item="{{item}}" data-index="{{index}}" bindtap="clickHipster" />
+  </view>
+
+</view>
+
+<view class="uploadBox" wx:if="{{uploadBoxType}}">
+  <view class="uploadBox2">
+    <image src="https://qingdao714-1301174277.cos.ap-beijing.myqcloud.com/ar_image//upload.gif" mode="" />
+    <view>模型加载中...</view>
+  </view>
+
+</view>
